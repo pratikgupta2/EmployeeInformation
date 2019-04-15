@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "employee-information-client-side-solution",
+    "id": "232eed19-fad0-414b-b89a-458638d91b7c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "features": [{
+      "title": "employee-information-client-side-solution",
+      "description": "employee-information-client-side-solution",
+      "id": "4a1210d4-1abf-4eb4-95a6-a7abd684e30e", 
+      "version": "1.0.0.0",
+      "assets": {
+        "elementManifests": [
+          "elements.xml"
+        ],
+        "elementFiles":[
+          "schema.xml"
+        ]
+      }
+    }]
+  },
+  "paths": {
+    "zippedPackage": "solution/employee-information.sppkg"
+  }
+}

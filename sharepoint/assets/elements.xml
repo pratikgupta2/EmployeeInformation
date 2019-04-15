@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+<Field ID="{1278d0a6-3958-4193-b8fa-59f8e18d58f4}"
+            Name="Employee1Email"
+            DisplayName="Email"
+            Type="Text"
+            Required="TRUE"
+            Group="Employee1" />
+
+<Field ID="{0d21b26b-eec7-4c89-ae38-fd115c471b81}"
+            Name="Employee1Phone"
+            DisplayName="Phone"
+            Group="Employee1"
+            Type="Number"
+            Required="TRUE"
+            Min="1000000000"
+            Max="9999999999"
+            Percentage="FALSE" />
+
+<Field ID="{b6a96089-5f56-4ae3-8ee1-44e1d4642f6d}" 
+            Name="Employee1Address" 
+            DisplayName="Address" 
+            Type="Note" NumLines="6" RichText="TRUE" 
+            RichTextMode="FullHtml" Required="TRUE"  
+            Group="Employee1" />
+
+<Field ID="{b573e384-390b-44d3-8569-8ea7d21f8521}"
+            Name="Employee1Office"
+            DisplayName="Office"
+            Type="Choice"
+            Required="TRUE"
+            Group="Employee1">
+        <CHOICES>
+        <CHOICE>Amazon</CHOICE>
+        <CHOICE>Microsoft</CHOICE>
+        <CHOICE>OYO</CHOICE>
+        <CHOICE>Tesla</CHOICE>
+        <CHOICE>Alphabet</CHOICE>
+        <CHOICE>Rencore</CHOICE>
+        </CHOICES>
+    </Field>
+
+     <Field ID="{51683054-7dd8-42d7-b3cc-e939db8cf5cf}"
+            Type="User" 
+            Name="Employee1Manager" 
+            DisplayName="Manager" 
+            List="UserInfo" 
+            Required="FALSE" 
+            UserSelectionMode="1" 
+            UserSelectionScope="0" 
+            Group="Employee1" />
+    
+    <Field ID="{efa0173c-2092-4470-a892-123737535125}"
+            Type="User" 
+            Name="Employee1EmergencyContact" 
+            DisplayName="Emergency Contact" 
+            List="UserInfo" 
+            Required="FALSE" 
+            UserSelectionMode="1" 
+            UserSelectionScope="0" 
+            Group="Employee1" />
+
+    <ContentType ID="0x0100263144a2e5434c8b9ecad1778a84eb6a" 
+            Name="Employee Details" 
+            Group="Employee1" 
+            Description="Employee Details">
+        <FieldRefs>
+            <FieldRef ID="{1278d0a6-3958-4193-b8fa-59f8e18d58f4}" />
+            <FieldRef ID="{0d21b26b-eec7-4c89-ae38-fd115c471b81}" />
+            <FieldRef ID="{b6a96089-5f56-4ae3-8ee1-44e1d4642f6d}" />
+            <FieldRef ID="{b573e384-390b-44d3-8569-8ea7d21f8521}" />
+            <FieldRef ID="{51683054-7dd8-42d7-b3cc-e939db8cf5cf}" />
+            <FieldRef ID="{efa0173c-2092-4470-a892-123737535125}" />
+        </FieldRefs>
+    </ContentType>
+
+    <ListInstance
+            CustomSchema="schema.xml"
+            FeatureId="{00bfea71-de22-43b2-a848-c05709900100}"
+            Title="Employee Details" 
+            Description="Employee Details"
+            TemplateType="100"
+            Url="Lists/EmployeeDetails">
+
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Mohit</Field>
+          <Field Name="Employee1Phone">9990934854</Field>
+          <Field Name="Employee1Email">mohitcreative@yahoo.com</Field>
+          <Field Name="Employee1Address">C-73, Surya Nagar, Pune</Field>
+          <Field Name="Employee1Office">Amazon</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Pratik</Field>
+          <Field Name="Employee1Phone">9595049235</Field>
+          <Field Name="Employee1Email">pratik.gupta@gmail.com</Field>
+          <Field Name="Employee1Address">A-604, Sanskriti Apartments, Delhi</Field>
+          <Field Name="Employee1Office">Microsoft</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Gaurav</Field>
+          <Field Name="Employee1Phone">9711235983</Field>
+          <Field Name="Employee1Email">gauravforfun@gmail.com</Field>
+          <Field Name="Employee1Address">D-203, Geetanjali Apartments, Dhanbad</Field>
+          <Field Name="Employee1Office">OYO</Field>
+        </Row>
+      </Rows>
+    </Data>   
+    </ListInstance>
+</Elements>
